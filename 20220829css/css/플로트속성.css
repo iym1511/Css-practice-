@@ -1,0 +1,11 @@
+.header{
+    border: 3px solid red;
+}
+.nav{
+    border: 3px solid purple;
+    float: left;
+    width: 30%;
+}
+.section{
+    border: 3px solid olivedrab;
+}
