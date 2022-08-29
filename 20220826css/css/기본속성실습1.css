@@ -1,0 +1,31 @@
+h1 {
+   font-family: fantasy;
+}
+
+.box { /*div*/
+    width: 200px;
+    height: 100px;
+    background-color: antiquewhite;
+    border: 2px solid brown;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-shadow: 1px 1px 2px black;
+    font-style: italic;/*폰트 기울기*/
+}
+
+span {   /*span은 width height안먹음 inline 이라서*/
+    text-decoration: underline wavy 2px red;/*웨이브밑줄처짐*/
+    color: green;
+    font-family: 궁서;
+}

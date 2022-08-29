@@ -1,0 +1,12 @@
+a{
+    display: inline-block;
+    color: black;
+    background-color: aquamarine;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+a:hover{
+    background-color: yellowgreen;
+    transition: 0.5s;
+}

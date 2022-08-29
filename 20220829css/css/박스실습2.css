@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+}
+table {
+    background-color: blanchedalmond;
+    border-bottom-left-radius: 20px; /*아래 왼쪽 둥글게*/
+    border-bottom-right-radius: 20px; /*아래 오른쪽 둥글게*/
+    border-collapse: collapse;
+    margin: auto;
+}
+.menu1 {
+    background-color: orange;
+    border-bottom: 1px solid brown;
+    text-align: center;
+}
+
+td{
+    padding: 10px 20px;
+}
