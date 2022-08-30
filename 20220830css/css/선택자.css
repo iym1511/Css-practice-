@@ -1,10 +1,10 @@
 /* 자손 선택자 접근 */
-.m-parents p{
+.m-parents p{ /*안에 있는 태그 접근*/
     background-color: aquamarine;
 }
 
 /* 자식 선택자 접근 */
-.m-parents > p{
+.m-parents > p{ /*바로 아래에있는 태그 접근*/ /*바로 위에 있는건 부모*/
     border: 3px solid red;
 }
 
