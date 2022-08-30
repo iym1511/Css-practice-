@@ -1,0 +1,28 @@
+/* 자손 선택자 접근 */
+.m-parents p{
+    background-color: aquamarine;
+}
+
+/* 자식 선택자 접근 */
+.m-parents > p{
+    border: 3px solid red;
+}
+
+/* 일반 동위 선택자 */
+.m-sibling ~ p{
+    background-color: seagreen;
+}
+/* 인접 동위 선택자 : 바로 뒤에있는 요소의 디자인을 바꾸고 싶을때*/
+.m-sibling + p{
+    background-color: skyblue;
+}
+
+.test-ul li{
+    border-right: 3px solid black;
+    float: left;
+    list-style-type: none;
+    padding: 0 20px;
+}
+.test-ul .last-li + li{ /*last-li 바로 뒤에있는 li 가 C라서 태두리사라짐*/
+    border:none
+}

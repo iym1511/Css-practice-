@@ -1,0 +1,17 @@
+.out-box{
+    background-color: darkolivegreen;
+    width: 700px;
+    height: 80px;
+}
+
+ul{
+    overflow: auto;
+    padding: 20px;
+    list-style-type: none;
+
+}
+li{
+    float: left;
+    padding: 10px;
+    background-color: darkorchid;
+}
