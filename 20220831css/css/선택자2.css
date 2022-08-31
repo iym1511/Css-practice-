@@ -1,0 +1,134 @@
+/* 링크(a태그에)사용되는 동적의사클래스 */
+a:link{
+    color: red;
+}
+a:visited{
+    color: blue;
+}
+a:hover{
+    color: yellow;
+}
+a:active{
+    color: green;
+}
+.focus-input:focus{ /*빈칸입력창에 입력시 색변함*/
+    background-color: blueviolet;
+}
+/* 체크 상태일때, 바로 뒤에 있는 span태그의 배경색을 바꾼다 */
+.checked-box:checked + span{
+    background-color: red;
+}
+/*disable상태일때 바로 뒤에 있는 span태그의 글자색 바꿈*/
+.disable-box + span{ 
+    color: gray;
+}
+.enabled-box + span{
+    background-color: blue;
+}
+
+/*------ 구조의사 클래스 ------*/
+.table-child{
+    border-collapse: collapse;
+}
+.table-child tr:first-child{ /*tr중에 첫번째*/
+    background-color: blueviolet;
+}
+.table-child tr td:first-child{ /*td중에 첫번째*/
+    background-color: aquamarine;
+}
+/*지정한 위치에 색을 입혀줌 (n번째 자식으로 찾는다)*/
+.table-child tr:nth-child(2n-2){
+    background-color: yellow;
+}
+
+/*------ of-type ------*/
+.of-type li:first-of-type{ /*li타입만 체크한다*/
+    background-color: darkgreen;
+}
+
+/*------ 의사 요소 ------*/
+.first-letter::first-letter{
+    font-size: 1.5em;
+}
+
+.first-line::first-line{
+    color: red;
+}
+.before::before{
+    /* before를 이용해서 앞에 들어가는 내용 */
+    content: "(추가된글자)";
+    /*컨텐츠 안에 들어가는 내용을 꾸민다*/
+    color: blue;
+    background-color: yellow;
+    padding: 10px;
+}
+.after::after{
+    /*컨텐츠에 아무내용이 없을때는
+     display값을 inline-black으로 두어 크기를 설정할 수 있게한다*/
+    content: " ";
+    background-color: brown;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.selection::selection{
+    background-color: purple;
+    color: white;
+}
+
+/*------- 속성 선택자 -------*/
+p[class]{ /*p테그 전부 취소줄 생김*/
+    text-decoration: line-through;
+}
+input[type="button"] + span{ /*버튼타입만 */
+    background-color: blue;
+}
+input[type="checkbox"] + span{/*체크박스타입만 */
+    background-color: aqua;
+}
+input[type="radio"] + span{ /*라디오 타입만*/
+    color: red;
+}
+
+/*
+not의사 클래스는 앞에 요소를 붙여서 지정하지 않고
+괄호 안에 제외할 태그나 선택자를 입력한다
+*/
+/* 
+body :not(p){
+    color: blueviolet;
+}
+*/
+.not :not(p){
+    color: pink;
+}
+.color {
+    color: orangered;
+}
+
+h1.color {
+    color: orchid;
+}
+
+/*-----------------------------------------------------*/
+
+/*구조의사클래스 실습*/
+.li-background li {
+    background-color: antiquewhite;
+}
+.li-background li:nth-child(2n){
+    background-color: brown;
+}
+
+/*list의 숫자값을 없애고, input:checked 일때 취소줄생성*/
+/*상태의사클래스 실습*/
+.list{
+    list-style-type: none;
+}
+
+.list > li > .checked-box2:checked + span{
+    background-color: beige;
+    text-decoration: line-through;
+}
+

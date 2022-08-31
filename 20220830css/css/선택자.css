@@ -26,3 +26,4 @@
 .test-ul .last-li + li{ /*last-li 바로 뒤에있는 li 가 C라서 태두리사라짐*/
     border:none
 }
+

@@ -1,0 +1,7 @@
+ol>li{
+    background-color: green;
+}
+.input_text:focus{
+    color: chocolate;
+    font-weight: bold;
+}

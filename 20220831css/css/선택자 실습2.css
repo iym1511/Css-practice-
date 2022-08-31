@@ -1,0 +1,32 @@
+.main-contents{
+    border: 3px solid red;
+}
+.main-contents ul{
+    list-style: none;
+}
+
+ul{
+    text-decoration: none;
+}
+.tag  ul li{
+    margin-right: 10px;
+    color: white;
+    background-color: blue;
+    border-radius: 15px;
+    padding: 6px;
+    float: right;
+    
+}
+
+/*---------------------------------------*/
+
+.notic p::after{
+    display: inline-block;
+    content: "N";
+    background-color: orange;
+    color: white;
+    text-align: center;
+    width: 20px;
+    border-radius: 20px;
+    margin-left: 5px;
+}
