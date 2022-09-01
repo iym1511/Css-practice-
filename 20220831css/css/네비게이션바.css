@@ -15,7 +15,7 @@ a{
     background-color: darkgrey;
 }
 .gnb > ul > li{
-    float: left;
+    float: left; /*세로(메뉴2가 밑에서 왼쪽으로감)*/
     padding: 5px 10px;
 }
 .g-sub{
@@ -33,4 +33,5 @@ a{
 }
 .gnb > ul > li:hover .g-sub{
     display: block;/*ul나타냄*/
+    
 }

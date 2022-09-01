@@ -1,0 +1,19 @@
+@import url("reset.css");
+
+
+@font-face { /*폰트페이스 아니면 url둘중 하나*/
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+form{
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    background-color: lightcoral;
+}
+
+h1{
+    font-family: 'GangwonEduPowerExtraBoldA';
+}

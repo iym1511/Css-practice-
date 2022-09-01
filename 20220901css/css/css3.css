@@ -1,0 +1,55 @@
+.color-hsl{
+    background-color: hsl(0, 80%, 80%);
+    color: hsl(hue, saturation, lightness);/*색도 채도 명도*/
+}
+
+.m-box {
+    width: 100%;
+    height: 100px;;
+}
+.linear-gradient{/*첫번째에는 각도조절이나 그라데이션 진행방향 표시가능*/
+    background: -webkit-linear-gradient(0deg, green,rgb(143, 173, 255),rgb(134, 134, 134));
+} /*화면에 표시가안되면 -webkit-을 쓰자*/
+.radial-gradient{ /*뒤에 퍼센트가 같으면 그라데이션 사라짐*/
+    background: -webkit-radial-gradient(circle,rgba(18, 80, 28, 0)30%,rgb(0, 66, 22)30%);
+}
+.m-background{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(94, 92, 218);
+}
+.m-frame { /*static 포지션의 위치에서 이동*//*radial 이랑 합쳐짐*/
+    position: absolute;
+    margin-top: -100px;/*가운대 공백생기는거 위로 올려줌*/
+}
+
+.box-shadow{
+    background-color: antiquewhite;
+    box-shadow: 0px 2px 10px rgb(57, 99, 44);
+}
+
+.box-img{
+    background-image: url(https://cdn.pixabay.com/photo/2022/07/31/07/52/northern-gannets-7355205_960_720.jpg);
+    background-size: contain;/*크기에 맞개끔 들어감*/
+    background-size: 100px 100px;
+    background-size: cover; /*이걸 재일 많이씀*/
+}
+
+.m-textbox{
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+}
+.text-overflow{ /*긴 글을 뒤에 다 안보이게할지 보이게할지 할때 사용*/
+    word-break: break-all; /*문장이 긴걸 박스안에 잡아줌*/
+    word-wrap: break-word;
+    overflow: hidden;  
+    text-overflow: ellipsis; /*문장이 기니까 뒤에 ...적힘*/
+    white-space: nowarp;
+
+}
+
+.korean-overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
