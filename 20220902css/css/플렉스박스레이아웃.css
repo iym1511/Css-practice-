@@ -1,0 +1,49 @@
+/* 헤더 플렉스 박스로 정렬하기 */
+.flex{
+    display: flex;
+}
+.header{
+    justify-content: space-between;/*일정간격으로 나눠짐*/
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+/*태그 플랙스 박스로 정렬하기*/
+.tag > ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+.tag > ul > li{
+    background-color: rgb(241, 239, 239);
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 3px 10px;
+    margin: 5px;
+}
+
+/*main에서 flex 박스사용*/
+.main{
+    flex-wrap: wrap;/*한줄꽉차게 생성*/
+}
+.section1{
+    width: 100%;
+    height: 300px;
+    background-color: aquamarine;
+}
+.section2{
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap; /*반응형처럼 줄이면 아랫줄로 내려감*/
+}
+.section2 > div{
+    max-width: 300px; 
+    min-width: 250px;
+    height: 100px;
+    background-color: darkolivegreen;
+}
+.section3{
+    width: 100%;
+    height: 200px;
+    background-color: chocolate;
+}

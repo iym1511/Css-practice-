@@ -60,3 +60,144 @@
 .transition-transform:hover{
     transform: scale(1.5) translate(100px, 0);/*translate를 rotate(deg)바꾸면 회전*/
 }
+
+/*0902*/
+/*마우스올리면 1초동안 0.3초뒤에 투명해짐
+*/
+.transition-delay{
+    transition: opacity 1s; 
+    transition-delay: 0.3; 
+}
+.transition-delay:hover{
+    opacity: 0;
+}
+
+.transition-delay-input{
+    transition: background-color 1ms;
+    /*
+    딜레이와 듀레이션은 시작할때 값을 하나만 주면 
+    전환 시작/끝의 딜레이와 듀레이션이 동일하게 들어간다
+    원한다면 값을 따로 줄 수 있다
+    */
+}
+.transition-delay-input:focus{
+    background-color: darkorange;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+
+/*오른쪽으로 슬라이드*/
+.transition-timing-linear{
+    transition: transform 1s;
+    transition-timing-function: linear;
+}
+.transition-timing-linear:hover{
+    transform: translateX(100px);
+}
+
+.transition-timing-ease{
+    transition: transform 1s;
+    transition-timing-ease: ease;
+}
+
+.transition-timing-ease:hover{
+    transform: translateX(100px);
+}
+
+
+/*연습문제*/
+/* div태그를 이용해서, 마우스를 올리면 border값이 5px 생기는 전환 */
+.transition-border{
+    transition: 1s;
+}
+.transition-border:hover{
+    border: 5px solid rgb(255, 0, 0);
+}
+/*  체크박스를 클릭했을때, 뒤에있는 span태그의 값이 글자색이 바뀌는 전환  */
+.transition-check + span{
+    transition:1s;
+    font-size:50px
+}
+.transition-check:checked + span{/*체크 해재 하면 원래대로 돌아옴*/
+    color: blueviolet;
+    
+}
+
+/*메뉴바 만들기 ★★★★*/
+.menu-icon{
+    box-sizing: border-box;
+    margin: 3.5px;
+    width: 20px;
+    height: 3px;
+    border-top: 3px solid black;
+    transition: border-top 1s;
+
+}
+
+.menu{
+    display: inline-block;
+}
+.menu:hover .menu-icon{
+    border-top : 3px solid red;
+}
+
+
+/*메뉴바 하나하나 설정하기*/
+.line1{
+    transform-origin: left top;
+    transition: transform 1s;
+}
+.menu:hover .line1{
+    transform: rotate(45deg);
+
+}
+.line3{
+    transform-origin: left top;
+    transition: transform 1s;
+}
+.menu:hover .line3{
+    transform: rotate(-45deg);
+}
+.line2{
+    transition: opacity 1s;
+}
+.menu:hover .line2{
+    opacity: 0;
+}
+
+/*마우스 올렸을때 이미지 확대*/
+.img-box{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;/*고정된 부분만 보여줌*/
+}
+.img-box:hover{/*검은색 태두리 생성*/
+    background-color: rgb(0, 0, 0,0.5);
+}
+
+.img{
+    width: 350px;
+    transition: transform 1s;
+}
+.img-box:hover img{/*이미지 확대*/
+    transform: scale(1.2);
+}
+.img-box:after{
+    box-sizing: border-box;
+    display: inline-block;
+    content: "미리보기";
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    padding: 80px 0;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-top: -150px;
+    transition: background-color 1s;
+}
+.img-box:hover:after{
+    background-color: rgba(0, 0, 0, 0.3);
+}

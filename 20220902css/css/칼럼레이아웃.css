@@ -1,0 +1,12 @@
+.main{
+    width: 100%;
+    background-color: beige;
+}
+.colums{
+    column-count: 3; /*문단 나누는 횟수*/
+    column-rule-style: dashed;/*점선*/
+    column-rule-color: red;
+    column-rule-width: 2px;/*점선간격*/
+    column-gap: 40px;
+    column-fill: auto;
+}
