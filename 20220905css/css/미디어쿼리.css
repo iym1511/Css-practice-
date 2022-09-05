@@ -1,0 +1,87 @@
+body{
+    background-color: orange;
+}
+h1{
+    color: white;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100px;
+}
+.grid-item{
+    border: 1px solid white;
+}
+
+/* min-width 적어준값 이상일때 보여지는 화면*/
+@media screen and (min-width:1024px){
+    body {
+        background-color: lightblue; 
+    }
+    .grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px){
+    body{
+        background-color: blueviolet;
+    }
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* max-width 적어준값 이하일때 보여지는 화면 */
+@media screen and (max-width:768px){
+    body {
+        background-color: darkkhaki;
+    }
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+/*-----------------------------------------------------------------*/
+
+/* 미디어 쿼리를 이용한 화면 크기에 따른 네브바 변화 */
+.nav{
+    border-bottom: 5px solid black;
+}
+.nav .mobile-menuicon{/*menu전체에 none을 주고 block 으로 소환*/
+    display: none;
+}
+.nav .menu{ 
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.nav .menu > li{
+    padding: 30px 10px;
+}
+
+/* pc크기에서 보여질 화면 */
+@media screen and (min-width:1024px){
+
+}
+/* 탭 크기에서 보여질 화면 */
+@media (min-width:768px) and (max-width:1023px){
+    .nav .menu{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);/*3줄*/
+        justify-content: space-around;
+        text-align: center;
+    }
+}
+/* 모바일 화면에서 보여질 화면 */
+@media screen and (max-width:768px){
+.nav .mobile-menuicon{
+    display: block; /*이걸로 보이게함*/
+}
+.nav .menu{
+    display: none;
+}
+}
+
+
